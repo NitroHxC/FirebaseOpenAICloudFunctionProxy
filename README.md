@@ -12,7 +12,7 @@ It contains the callback for an Https Call you can trigger from the Firebase SDK
 
 *BEWARE*: `onCall` is for use with Firebase SDK, and is different from `onRequest` which is the callback for an HTTP request.
 
-In this repo the function is called `postOpenAIProdigy` because I used it for an app I made called `Prodigy` , and I deployed it to the `europe-west1` region.
+In this repo the function is called `postOpenAIProdigy` because I used it for an app I made called "Prodigy" , and I deployed it to the `europe-west1` region.
 
 To deploy your function to firebase, run the following command in the terminal:
 ```
@@ -27,6 +27,7 @@ gcloud functions deploy postOpenAIProdigy --set-env-vars OPENAI_KEY="sk-<your op
 ### Example Kotlin:
 
 Put this in a ViewModel and use it for one-shot calls to ChatGPT API. 
+
 You can use the `textResponse` LiveData to observe the result in your UI.
 
 ```kotlin:ChatGPTViewModel.kt
@@ -84,7 +85,7 @@ suspend fun callOpenAI(query: String) = viewModelScope.launch {
 
 You should declare the proper the following data classes to parse with Gson:
 
-```
+```kotlin:
 data class FirebaseOpenAIResponse(
     val result: FirebaseResult
 )
