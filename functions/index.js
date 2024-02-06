@@ -1,5 +1,4 @@
 const {onCall, HttpsError} = require("firebase-functions/v2/https");
-// const fetch = require("node-fetch");
 
 const {setGlobalOptions} = require("firebase-functions/v2");
 
