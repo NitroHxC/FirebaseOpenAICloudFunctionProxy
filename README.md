@@ -9,7 +9,8 @@ select the Cloud Functions option with spacebar, then select Javascript as langu
 
 The `index.js` file in the `functions` folder is all you need. 
 It contains the callback for an Https Call you can make from the Firebase SDK. 
-*BEWARE*: it is different from `onRequest` which is the callback for an HTTP request.
+
+*BEWARE*: `onCall` is for use with Firebase SDK, and is is different from `onRequest` which is the callback for an HTTP request.
 
 To deploy the function to firebase, run the following command in the terminal:
 ```
